@@ -227,6 +227,15 @@ export type NativeStackNavigationOptions = {
    * - "none" – the screen appears/dissapears without an animation
    */
   stackAnimation?: ScreenProps['stackAnimation'];
+  /**
+   * Boolean indicating whether navigation bar should have a search field
+   * @platform ios
+   */
+  hasSearch?: boolean;
+  /**
+   * Placeholder text for the searchBar
+   */
+  searchPlaceholder?: string;
 };
 
 export type NativeStackNavigatorProps = DefaultNavigatorOptions<

@@ -38,10 +38,14 @@ export default function HeaderConfig(props: Props) {
     headerBackTitleStyle = {},
     headerShown,
     backButtonInCustomView,
+    hasSearch,
+    searchPlaceholder
   } = props;
 
   return (
     <ScreenStackHeaderConfig
+      hasSearch={hasSearch}
+      searchPlaceholder={searchPlaceholder}
       hidden={headerShown === false}
       backButtonInCustomView={backButtonInCustomView}
       translucent={headerTranslucent === true}

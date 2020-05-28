@@ -27,6 +27,8 @@
 @property (nonatomic) BOOL backButtonInCustomView;
 @property (nonatomic) BOOL hideShadow;
 @property (nonatomic) BOOL translucent;
+@property (nonatomic) BOOL hasSearch;
+@property (nonatomic, retain) NSString *searchPlaceholder;
 
 + (void)willShowViewController:(UIViewController *)vc animated:(BOOL)animated withConfig:(RNSScreenStackHeaderConfig*)config;
 

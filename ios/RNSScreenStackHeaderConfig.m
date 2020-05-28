@@ -356,6 +356,19 @@
     return;
   }
 
+  if (@available(iOS 11.0, *)) {
+    if (config.hasSearch) {
+      UISearchController *navBarSearchController;
+      navBarSearchController = [[UISearchController new] initWithSearchResultsController:nil];
+      
+      if (config.searchPlaceholder) {
+        navBarSearchController.searchBar.placeholder = config.searchPlaceholder;
+      }
+      
+      navitem.searchController = navBarSearchController;
+    }
+  }
+
   navitem.title = config.title;
   if (config.backTitle != nil || config.backTitleFontFamily || config.backTitleFontSize) {
     prevItem.backBarButtonItem = [[UIBarButtonItem alloc]
